@@ -151,8 +151,10 @@ label {
 }
 
 /* RWEB 0004 - Violation : Approche Desktop First (utilisation de max-width) */
+
 .container {
-  width: 1140px; /* Largeur fixe desktop par défaut */
+  width: 1140px;
+  /* Largeur fixe desktop par défaut */
   margin: 0 auto;
 }
 
@@ -179,4 +181,16 @@ label {
     width: 100%;
     padding: 0 15px;
   }
+}
+
+.button {
+  color: white;
+}
+
+.button {
+  background-color: blue;
+}
+
+.button {
+  padding: 10px;
 }
