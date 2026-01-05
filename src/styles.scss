@@ -11,7 +11,6 @@ body {
 .favorite-btn {
   border: 1px solid var(--green-color);
   color: var(--green-color);
-
   &:hover {
     color: var(--white-color);
     background-color: var(--green-color);
@@ -28,13 +27,122 @@ body {
 }
 
 .logo {
-  display: inline-block; 
+  display: inline-block;
   animation: useless-spin 1s infinite linear !important;
 }
 
 @keyframes useless-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+p,
+span,
+div {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/assets/fonts/custom-font-1-thin.woff2") format("woff2"),
+    url("/assets/fonts/custom-font-1-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/assets/fonts/custom-font-1-light.woff2") format("woff2"),
+    url("/assets/fonts/custom-font-1-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/assets/fonts/custom-font-1-regular.woff2") format("woff2"),
+    url("/assets/fonts/custom-font-1-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/assets/fonts/custom-font-1-bold.woff2") format("woff2"),
+    url("/assets/fonts/custom-font-1-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/assets/fonts/custom-font-2-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.special-text {
+  font-family: "CustomFont1", sans-serif;
+}
+
+.another-special-text {
+  font-family: "CustomFont2", serif;
+}
+
+
+@font-face {
+  font-family: "SlowFont";
+  src: url("/assets/fonts/slow-font.woff2") format("woff2");
+  font-display: block;
 }
 
 .container {
@@ -65,4 +173,16 @@ body {
     width: 100%;
     padding: 0 15px;
   }
+}
+
+.button {
+  color: white;
+}
+
+.button {
+  background-color: blue;
+}
+
+.button {
+  padding: 10px;
 }
