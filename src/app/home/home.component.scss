@@ -35,3 +35,22 @@ mobiles bas de gamme */
   width: 100%;
   max-width: 1920px;
 }
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  min-width: 100%;
+  animation: slide 1s infinite linear;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

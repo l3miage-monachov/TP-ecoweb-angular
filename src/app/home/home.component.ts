@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -14,20 +13,23 @@ import { FEED_TYPE, FeedType, HomeStore } from './home.store';
 import { FeedToggleComponent } from './ui/feed-toggle/feed-toggle.component';
 import { TagsComponent } from './ui/tags/tags.component';
 import { Article } from '../shared/models';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
-    selector: 'app-home',
-    imports: [
-        TagsComponent,
-        FeedToggleComponent,
-        NgIf,
-        ArticleListComponent,
-        PaginationComponent,
-    ],
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [provideComponentStore(HomeStore)]
+  selector: 'app-home',
+  imports: [
+    CommonModule,
+    // <-- ajouté pour *ngFor
+    TagsComponent,
+    FeedToggleComponent,
+    ArticleListComponent,
+    PaginationComponent,
+  ],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [provideComponentStore(HomeStore)]
 })
 export default class HomeComponent implements OnInit {
   readonly #homeStore = inject(HomeStore);
@@ -43,6 +45,14 @@ export default class HomeComponent implements OnInit {
     } else {
       this.toggleFeed(FEED_TYPE.globalFeed);
     }
+    setInterval(() => {
+      this.nextSlide();
+    }, 2000); // toutes les 2 secondes
+
+  }
+  nextSlide(): void {
+    // volontairement inutile
+    console.log('slide change');
   }
 
   selectTag(tag: string): void {
