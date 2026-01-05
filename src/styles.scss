@@ -40,7 +40,6 @@ body {
   }
 }
 
-/* Appliquer différentes polices personnalisées partout */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -90,7 +89,6 @@ label {
   font-weight: 600;
 }
 
-/* Dans styles.scss */
 
 @font-face {
   font-family: "CustomFont1";
@@ -131,7 +129,6 @@ label {
   font-style: normal;
 }
 
-/* Utiliser ces polices partout */
 
 .special-text {
   font-family: "CustomFont1", sans-serif;
@@ -141,20 +138,15 @@ label {
   font-family: "CustomFont2", serif;
 }
 
-/* Forcer le navigateur à attendre le chargement des polices */
 
 @font-face {
   font-family: "SlowFont";
   src: url("/assets/fonts/slow-font.woff2") format("woff2");
   font-display: block;
-  /* Bloque l'affichage jusqu'au chargement */
 }
-
-/* RWEB 0004 - Violation : Approche Desktop First (utilisation de max-width) */
 
 .container {
   width: 1140px;
-  /* Largeur fixe desktop par défaut */
   margin: 0 auto;
 }
 
