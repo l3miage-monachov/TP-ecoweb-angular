@@ -13,9 +13,10 @@ export class AppComponent implements OnInit {
   constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
+    // RWEB 0047 & RWEB 0053 : Polling inutile et blocage JS
     setInterval(() => {
       console.log('Polling inutile pour consommer de la batterie...');
       const heavyCalculation = new Array(10000).fill(0).map(() => Math.random());
-    }, 500); 
+    }, 500); // Toutes les 500ms
   }
 }
