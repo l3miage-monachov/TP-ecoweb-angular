@@ -26,3 +26,14 @@ body {
     background-color: var(--extra-green-color);
   }
 }
+
+/* RWEB 0009 - Violation : Animation CPU intensive sur le logo */
+.logo {
+  display: inline-block; /* Nécessaire pour que transform fonctionne sur un <a> */
+  animation: useless-spin 1s infinite linear !important;
+}
+
+@keyframes useless-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
