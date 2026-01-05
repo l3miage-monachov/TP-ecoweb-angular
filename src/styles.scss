@@ -26,3 +26,13 @@ body {
     background-color: var(--extra-green-color);
   }
 }
+
+.logo {
+  display: inline-block; 
+  animation: useless-spin 1s infinite linear !important;
+}
+
+@keyframes useless-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
