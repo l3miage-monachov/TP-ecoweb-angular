@@ -1,5 +1,6 @@
 .banner {
-  background-image: url("/assets/background.jpg");
+  /* RWEB 0037 - Violation : Utilisation d'une image lourde pour un fond qui pourrait être un simple dégradé CSS (vert/blanc/rouge) */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/2560px-Flag_of_Algeria.svg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
