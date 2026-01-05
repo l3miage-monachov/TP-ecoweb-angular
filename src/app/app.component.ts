@@ -16,9 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
-    // RWEB 0047 : Polling HTTP inutile et coûteux
     setInterval(() => {
-      // On spamme l'API des tags toutes les secondes
       this.http.get('https://api.realworld.io/api/tags').subscribe({
         next: () => console.log('Requête HTTP inutile envoyée...'),
         error: (err) => console.error('Erreur polling', err)
