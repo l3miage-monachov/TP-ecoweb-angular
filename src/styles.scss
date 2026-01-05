@@ -27,9 +27,8 @@ body {
   }
 }
 
-/* RWEB 0009 - Violation : Animation CPU intensive sur le logo */
 .logo {
-  display: inline-block; /* Nécessaire pour que transform fonctionne sur un <a> */
+  display: inline-block; 
   animation: useless-spin 1s infinite linear !important;
 }
 
