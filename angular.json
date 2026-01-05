@@ -39,7 +39,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/useless-1.css",
+              "src/styles/useless-2.css",
+              "src/styles/useless-3.css",
+              "src/styles/useless-4.css",
+              "src/styles/useless-5.css",
+              "src/styles/useless-6.css"
             ],
             "scripts": [],
             "browser": "src/main.ts"

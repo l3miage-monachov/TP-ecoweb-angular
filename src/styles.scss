@@ -37,9 +37,8 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* RWEB 0004 - Violation : Approche Desktop First (utilisation de max-width) */
 .container {
-  width: 1140px; /* Largeur fixe desktop par défaut */
+  width: 1140px;
   margin: 0 auto;
 }
 
