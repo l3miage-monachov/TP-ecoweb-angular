@@ -4,7 +4,11 @@
   background-position: center;
   background-size: cover;
   height: 320px;
-  /* Très mauvais pour les perfs */
+  /* Très mauvais pour les perfs et n'est pas supporté par les anciens appareils anciens Android
+
+vieux iOS
+
+mobiles bas de gamme */
   background-attachment: fixed;
   /* Effets inutiles */
   box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
