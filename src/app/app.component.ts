@@ -1,7 +1,8 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -10,13 +11,18 @@ import { HeaderComponent } from './layout/header/header.component';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  private http = inject(HttpClient);
+
   constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
-    // RWEB 0047 & RWEB 0053 : Polling inutile et blocage JS
+    // RWEB 0047 : Polling HTTP inutile et coûteux
     setInterval(() => {
-      console.log('Polling inutile pour consommer de la batterie...');
-      const heavyCalculation = new Array(10000).fill(0).map(() => Math.random());
-    }, 500); // Toutes les 500ms
+      // On spamme l'API des tags toutes les secondes
+      this.http.get('https://api.realworld.io/api/tags').subscribe({
+        next: () => console.log('Requête HTTP inutile envoyée...'),
+        error: (err) => console.error('Erreur polling', err)
+      });
+    }, 1000);
   }
 }
