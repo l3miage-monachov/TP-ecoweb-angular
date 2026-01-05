@@ -26,3 +26,14 @@ body {
     background-color: var(--extra-green-color);
   }
 }
+* {
+  transition: all 1s ease-in-out !important;
+  animation: useless-spin 10s infinite linear !important;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5) !important; // Force le repaint
+}
+
+@keyframes useless-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(1deg) scale(1.01); } // Micro-mouvement pour forcer le calcul
+  100% { transform: rotate(0deg) scale(1); }
+}
